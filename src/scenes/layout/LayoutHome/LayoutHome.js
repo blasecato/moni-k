@@ -2,11 +2,10 @@ import React from 'react';
 import { Layout,Row,Col,Button,Carousel } from 'antd';
 import 'antd/dist/antd.css';
 import { Menu, Breadcrumb,Icon } from 'antd';
-import RegLogin from '../../RegLogin/RegLogin';
 import Home from '../../Home/Home';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import 'antd/dist/antd.css';
 import {withRouter} from 'react-router-dom';
+import './LayoutHome.css'
 
 const { SubMenu } = Menu;
 
@@ -35,14 +34,14 @@ class LayoutHome  extends React.Component{
                 </a>
                 </Col>
                 <Col span={5}>
-                <Link to="/reglogin" className="a">
+                <Link to="/register/" className="a">
                   Registrarse
                 </Link>
                 </Col>
                 <Col span={5}>
-                <a className="a">
+                <Link to="/login/" className="a">
                   Iniciar Sesion
-                </a>
+                </Link>
                 </Col>
             </Row>
             </div>

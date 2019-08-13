@@ -61,10 +61,10 @@
     color: #fdcc3a;
   }
   .head{
-    background-image: url("https://i.pinimg.com/originals/0a/8d/42/0a8d42aadffb455cd54a1db2f557c9df.jpg") !important;
-    opacity: 0.8;
+    background-color: rgba(47,23,15,.9);
     padding-bottom: 1.5rem!important;
-    
+    text-transform: uppercase!important;
+
   }
   .content{
     background-image: url("http://st.gde-fon.com/wallpapers_original/411194_stol_tarelki_specii_karri_krasnyj_7500x5000_www.Gde-Fon.com.jpg");
@@ -74,15 +74,13 @@
   .lay{
     min-height: 100vh;
     
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: calc(10px + 2vmin);
   }
   .footer{
-    background-image: url("https://i.pinimg.com/originals/0a/8d/42/0a8d42aadffb455cd54a1db2f557c9df.jpg") !important;
-    opacity: 0.8;
+    background-color: rgba(47,23,15,.9);
   }
   
   

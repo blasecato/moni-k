@@ -8,7 +8,7 @@ import { Card } from 'antd';
 import { Menu, Breadcrumb,Icon } from 'antd';
 import LayoutHome from '../layout/LayoutHome/LayoutHome';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import RegLogin from '../RegLogin/RegLogin';
+import Login from '../Login/Login';
 
 
 const { Meta } = Card;
