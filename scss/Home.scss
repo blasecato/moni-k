@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box; 
+}
+.App {
+  width: 100%;
+  height: 100%;
+    .content{
+        background-image: url("http://st.gde-fon.com/wallpapers_original/411194_stol_tarelki_specii_karri_krasnyj_7500x5000_www.Gde-Fon.com.jpg");
+        background-attachment: fixed;
+        background-position: center;
+    }
+    .fondo{
+      
+      .App-logo {
+          height: 30%;
+          width: 30%;
+          background-color: transparent;
+          margin: auto;
+          display: block;
+      }
+    }
+    
+} 
+  .cards{
+      padding: 10px;
+    .card1{
+        border-radius: 15px ;
+        width: 80% ;
+        height: 40% ;
+        background-color: rgba(255,255,255,.85);
+        text-align: center;
+        display: flex;
+        .title{
+            color: chocolate;
+            font-size: 30px ;
+            font-family: Ralewa;
+        }
+        .tex{
+            font-size: 20px ;
+            font-family: Raleway;
+        }
+        .Button{
+            border-radius: 5px ;
+            height: 80px ;
+            width: 150px ;
+            background-color: #fdcc3a ;
+            color: chocolate ;
+            font-size: 20px ;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+      }
+      .card2{
+        border-radius: 5px;
+        height: 40%;
+        width: 40%;
+        margin: auto;
+        display: block;
+        .shef{
+            display: flex;
+            width: 100%;
+            left: 100%;
+          }
+      }
+  }
+  
+  
+  .ant-carousel .slick-slide {
+    text-align: center;
+    height: 300px;
+    line-height: 300px;
+    background: rgba(230,167,86,.9);
+    overflow: hidden;
+    margin-top: 1% ;
+  }
+  
+  .ant-carousel .slick-slide h3 {
+    color: chocolate;
+  }
+  
+  .footer{
+    background-color: rgba(47,23,15,.9);
+  }
+  
+  

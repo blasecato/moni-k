@@ -1,0 +1,19 @@
+.layout{
+    display: flex;
+    //dar espacio
+    justify-content: space-between;
+    background-color: rgba(47,23,15,.9);
+    text-transform: uppercase;
+    height: 50px;
+    a{
+        font-family: arial;
+        color: #fdcc3a ;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: bold;
+        flex:1; 
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+}  

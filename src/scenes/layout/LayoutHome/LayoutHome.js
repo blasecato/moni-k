@@ -1,13 +1,8 @@
 import React from 'react';
-import { Layout,Row,Col,Button,Carousel } from 'antd';
-import 'antd/dist/antd.css';
-import { Menu, Breadcrumb,Icon } from 'antd';
-import Home from '../../Home/Home';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import {withRouter} from 'react-router-dom';
-import './LayoutHome.css'
+import { Row,Col  } from 'antd';
+import { BrowserRouter as Link } from "react-router-dom";
+import '../../../css/LayoutHome.css' 
 
-const { SubMenu } = Menu;
 
 class LayoutHome  extends React.Component{
     
@@ -16,34 +11,22 @@ class LayoutHome  extends React.Component{
     }
     render(){
         return(
-            <div>
-                <Row gutter={4}>
-                <Col span={4}>
-                <Link to="/" className="a" >
+            <div class="layout">
+                <a href="../Home/" className="a" >
                     Inicio
-                </Link> 
-                </Col>
-                <Col span={4}>
+                </a> 
                 <a className="a" href="">
                     Tienda
                 </a>
-                </Col>
-                <Col span={5}>
                 <a className="a">
                     Contacto
                 </a>
-                </Col>
-                <Col span={5}>
-                <Link to="/register/" className="a">
+                <a href="../register/" className="a">
                   Registrarse
-                </Link>
-                </Col>
-                <Col span={5}>
-                <Link to="/login/" className="a">
+                </a>
+                <a href="../login/" className="a">
                   Iniciar Sesion
-                </Link>
-                </Col>
-            </Row>
+                </a>
             </div>
         );
     }
