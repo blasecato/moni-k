@@ -7,20 +7,18 @@
   height: 100%;
 }
 .App .content {
-  background-image: url("http://st.gde-fon.com/wallpapers_original/411194_stol_tarelki_specii_karri_krasnyj_7500x5000_www.Gde-Fon.com.jpg");
+  width: 100%;
+  height: 100%;
+  background-image: url("http://oleoespecias.com/images/slider/oleoespecias-slide11.jpg");
   background-attachment: fixed;
   background-position: center;
 }
-.App .fondo .App-logo {
-  height: 30%;
-  width: 30%;
-  background-color: transparent;
-  margin: auto;
-  display: block;
-}
 
 .cards {
-  padding: 10px;
+  padding: 15px;
+  background: white;
+  margin: auto;
+  flex-wrap: wrap;
 }
 .cards .card1 {
   border-radius: 15px;
@@ -52,7 +50,6 @@
   border-radius: 5px;
   height: 40%;
   width: 40%;
-  margin: auto;
   display: block;
 }
 .cards .card2 .shef {

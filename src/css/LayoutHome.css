@@ -1,20 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .layout {
   display: flex;
-  justify-content: space-between;
-  background-color: rgba(47, 23, 15, 0.9);
+  justify-content: center;
+  background-color: rgba(47, 23, 15, 0.6);
   text-transform: uppercase;
-  height: 50px;
+  height: 300px;
+}
+.layout ul, .layout ol, .layout li {
+  list-style: none;
+}
+@media (max-width: 742px) {
+  .layout {
+    height: 70px;
+    background-color: rgba(47, 23, 15, 0.9);
+    padding: 10px;
+    justify-content: space-between;
+  }
+  .layout .logo {
+    height: 60px;
+    background-color: transparent;
+    display: block;
+  }
+  .layout .menu {
+    display: flex;
+  }
+  .layout .menu .btom {
+    width: 306;
+    background: #fdcc3a;
+    border-color: #fdcc3a;
+  }
+}
+@media (min-width: 742px) and (max-width: 1023px) {
+  .layout {
+    font: oblique bold 100% cursive;
+    color: #fdcc3a;
+  }
+  .layout .menu {
+    display: none;
+  }
+  .layout .logo {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .layout {
+    height: 300px;
+  }
+  .layout .menu {
+    display: none;
+  }
+  .layout .logo {
+    display: none;
+  }
 }
 .layout a {
-  font-family: arial;
+  font: oblique bold 120% cursive;
+  color: #fdcc3a;
   color: #fdcc3a;
   text-decoration: none;
-  font-size: 12px;
-  font-weight: bold;
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px 10px;
+  height: 80%;
+}
+.layout a .App-logo {
+  height: 70%;
+  background-color: transparent;
+  display: block;
+}
+@media (max-width: 742px) {
+  .layout a {
+    height: 20%;
+    font: oblique bold 80% cursive;
+    display: none;
+  }
+  .layout a .App-logo {
+    height: 0%;
+  }
+}
+@media (min-width: 742px) and (max-width: 1023px) {
+  .layout a {
+    font: oblique bold 100% cursive;
+    color: #fdcc3a;
+  }
+}
+@media (min-width: 1024px) {
+  .layout a {
+    font: oblique bold 120% cursive;
+    color: #fdcc3a;
+  }
+}
+
+.text {
+  height: 20%;
+  margin: 10px;
+  padding: 10px;
+}
+.text h1 {
+  display: flex;
+  font-size: 50px;
+  justify-content: center;
+  color: #244979;
+  font: oblique bold 220% cursive;
 }
 
 /*# sourceMappingURL=LayoutHome.css.map */

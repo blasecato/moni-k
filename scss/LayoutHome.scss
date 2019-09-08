@@ -1,19 +1,108 @@
+$smartphone: 742px;
+$tablet: 1023px;
+$desktop: 1024px;
+*{
+    margin:0;
+    padding: 0;
+}
 .layout{
+    ul , ol ,li{
+        list-style: none;
+        
+    }
     display: flex;
     //dar espacio
-    justify-content: space-between;
-    background-color: rgba(47,23,15,.9);
+    justify-content: center;
+    background-color: rgba(47, 23, 15, 0.6);
     text-transform: uppercase;
-    height: 50px;
+    height: 300px;
+    @media(max-width: $smartphone){
+        height: 70px; 
+        background-color: rgba(47, 23, 15, 0.9);
+        padding: 10px;
+        justify-content: space-between;
+        .logo {
+            height: 60px;
+            background-color: transparent;
+            display: block;
+        }
+        .menu {
+            display: flex;
+            
+            
+            .btom{
+                width: 306;
+                background: #fdcc3a;
+                border-color: #fdcc3a;
+            }
+        }
+    }
+    @media(min-width: $smartphone) and (max-width: $tablet){
+        font: oblique bold 100% cursive;
+        color: #fdcc3a;
+        .menu{
+            display: none;
+        }
+        .logo {
+            display:none;
+        }
+    }
+    @media(min-width: $desktop){
+        height: 300px;
+        .menu{
+            display: none;
+        }
+        .logo {
+            display:none;
+        }
+    }
     a{
-        font-family: arial;
-        color: #fdcc3a ;
+        font: oblique bold 120% cursive;
+        color: #fdcc3a;
+        //color: #f7d01d ;
+        color: #fdcc3a;
         text-decoration: none;
-        font-size: 12px;
-        font-weight: bold;
-        flex:1; 
         display: flex;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
+        padding: 10px 10px;
+        height: 80%;
+ 
+        .App-logo {
+            height: 70%;
+            background-color: transparent;
+            display: block;
+        }
+        @media(max-width: $smartphone){
+            height: 20%;
+            font: oblique bold 80% cursive;
+            .App-logo {
+                height: 0%;
+            }
+            display: none;
+        }
+        @media(min-width: $smartphone) and (max-width: $tablet){
+            font: oblique bold 100% cursive;
+            color: #fdcc3a;
+        }
+        @media(min-width: $desktop){
+            font: oblique bold 120% cursive;
+            color: #fdcc3a;
+        }
+        
     }
+    
 }  
+.text{
+    height: 20%;
+    margin: 10px;
+    padding: 10px;
+    h1{
+        display: flex;
+        font-size: 50px;
+        justify-content: center; 
+        //color:#f7d01d;
+        color: #244979;
+        font: oblique bold 220% cursive;
+    }
+}

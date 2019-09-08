@@ -16,11 +16,9 @@ class Home extends React.Component {
     return (
       <div className="App">
         <Content className="content">
-          <div class="fondo">
-            <img src={logo} className="App-logo" alt="logo" />
               <LayoutHome></LayoutHome>
-          </div>
-          <Row gutter={16} className="cards">
+          <div className="cards">
+          <Row gutter={16}>
             <Col span={8} className="card2">
               <img src={shef} className="shef" alt="logo" />
             </Col>
@@ -33,6 +31,7 @@ class Home extends React.Component {
               </Card>
             </Col>
           </Row>
+          </div>
           <Carousel autoplay className="ant-carousel">
             <div>
               <h3>1</h3>
