@@ -6,12 +6,7 @@ $desktop: 1024px;
     padding: 0;
 }
 .layout{
-    ul , ol ,li{
-        list-style: none;
-        
-    }
     display: flex;
-    //dar espacio
     justify-content: center;
     background-color: rgba(47, 23, 15, 0.6);
     text-transform: uppercase;
@@ -27,9 +22,14 @@ $desktop: 1024px;
             display: block;
         }
         .menu {
-            display: flex;
-            
-            
+            .ant-menu-submenu-arrow{
+                width: .1px;
+            }
+            .ant-menu{
+                background: #fdcc3a;
+                border-color: #fdcc3a;
+                color:#000000;
+            }
             .btom{
                 width: 306;
                 background: #fdcc3a;
@@ -37,6 +37,7 @@ $desktop: 1024px;
             }
         }
     }
+    
     @media(min-width: $smartphone) and (max-width: $tablet){
         font: oblique bold 100% cursive;
         color: #fdcc3a;
@@ -57,17 +58,15 @@ $desktop: 1024px;
         }
     }
     a{
-        font: oblique bold 120% cursive;
-        color: #fdcc3a;
-        //color: #f7d01d ;
-        color: #fdcc3a;
-        text-decoration: none;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 10px 10px;
         height: 80%;
- 
+        font: oblique bold 120% cursive;
+        color: #fdcc3a;
+        text-decoration: none;
+        
         .App-logo {
             height: 70%;
             background-color: transparent;
@@ -92,7 +91,12 @@ $desktop: 1024px;
         
     }
     
+    a:hover{
+    text-decoration: underline overline ;
+    color: #ffc002; 
+    }    
 }  
+
 .text{
     height: 20%;
     margin: 10px;

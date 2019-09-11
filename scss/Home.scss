@@ -10,10 +10,33 @@
         background-image: url("http://oleoespecias.com/images/slider/oleoespecias-slide11.jpg");
         background-attachment: fixed;
         background-position: center;
-        
+        .carrucel{
+          padding: 0px 100px;
+          .ant-carousel .slick-slide {
+            text-align: center;
+            height: 300px;
+            line-height: 200px;
+            background: #364d79;
+            .carru-cards{
+              display: flex;
+              align-content: center;
+              .img{
+                display: flex;
+              align-content: center;
+                .shef{
+                  height: 220px;
+                }
+              }
+            }
+          }
+          
+          .ant-carousel .slick-slide h3 {
+            color: #fff;
+          }
+        }
+      }
     }
-    
-}
+
 
   .cards{
       padding: 15px;
@@ -60,18 +83,8 @@
   }
   
   
-  .ant-carousel .slick-slide {
-    text-align: center;
-    height: 300px;
-    line-height: 300px;
-    background: rgba(230,167,86,.9);
-    overflow: hidden;
-    margin-top: 1% ;
-  }
   
-  .ant-carousel .slick-slide h3 {
-    color: chocolate;
-  }
+  
   
   .footer{
     background-color: rgba(47,23,15,.9);

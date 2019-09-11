@@ -13,6 +13,29 @@
   background-attachment: fixed;
   background-position: center;
 }
+.App .content .carrucel {
+  padding: 0px 100px;
+}
+.App .content .carrucel .ant-carousel .slick-slide {
+  text-align: center;
+  height: 300px;
+  line-height: 200px;
+  background: #364d79;
+}
+.App .content .carrucel .ant-carousel .slick-slide .carru-cards {
+  display: flex;
+  align-content: center;
+}
+.App .content .carrucel .ant-carousel .slick-slide .carru-cards .img {
+  display: flex;
+  align-content: center;
+}
+.App .content .carrucel .ant-carousel .slick-slide .carru-cards .img .shef {
+  height: 220px;
+}
+.App .content .carrucel .ant-carousel .slick-slide h3 {
+  color: #fff;
+}
 
 .cards {
   padding: 15px;
@@ -56,19 +79,6 @@
   display: flex;
   width: 100%;
   left: 100%;
-}
-
-.ant-carousel .slick-slide {
-  text-align: center;
-  height: 300px;
-  line-height: 300px;
-  background: rgba(230, 167, 86, 0.9);
-  overflow: hidden;
-  margin-top: 1%;
-}
-
-.ant-carousel .slick-slide h3 {
-  color: chocolate;
 }
 
 .footer {

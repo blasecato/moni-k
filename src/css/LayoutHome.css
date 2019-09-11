@@ -10,9 +10,6 @@
   text-transform: uppercase;
   height: 300px;
 }
-.layout ul, .layout ol, .layout li {
-  list-style: none;
-}
 @media (max-width: 742px) {
   .layout {
     height: 70px;
@@ -25,8 +22,13 @@
     background-color: transparent;
     display: block;
   }
-  .layout .menu {
-    display: flex;
+  .layout .menu .ant-menu-submenu-arrow {
+    width: 0.1px;
+  }
+  .layout .menu .ant-menu {
+    background: #fdcc3a;
+    border-color: #fdcc3a;
+    color: #000000;
   }
   .layout .menu .btom {
     width: 306;
@@ -58,15 +60,14 @@
   }
 }
 .layout a {
-  font: oblique bold 120% cursive;
-  color: #fdcc3a;
-  color: #fdcc3a;
-  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px 10px;
   height: 80%;
+  font: oblique bold 120% cursive;
+  color: #fdcc3a;
+  text-decoration: none;
 }
 .layout a .App-logo {
   height: 70%;
@@ -94,6 +95,10 @@
     font: oblique bold 120% cursive;
     color: #fdcc3a;
   }
+}
+.layout a:hover {
+  text-decoration: underline overline;
+  color: #ffc002;
 }
 
 .text {
