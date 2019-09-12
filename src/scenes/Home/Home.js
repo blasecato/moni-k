@@ -3,7 +3,7 @@ import logo from '../../assets/images/cocinera.png';
 import shef from '../../assets/images/shef.jpg';
 import { Icon, Card, Layout, Row, Col, Button, Carousel } from 'antd';
 import LayoutHome from '../layout/LayoutHome/LayoutHome';
-import '../../css/Home.css';
+import '../../Sass/mein.scss';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 
@@ -23,25 +23,20 @@ class Home extends React.Component {
       <div className="App">
         <Content className="content">
           <LayoutHome></LayoutHome>
-          <div className="carrucel">
-          <Carousel autoplay>
-            <div className="carru-cards">
-               <div className="img">
-                  <img src={shef} className="shef" alt="logo" />
-                  <img src={shef} className="shef" alt="logo" />
-                  <img src={shef} className="shef" alt="logo" />
-               </div>
-            </div>
-            <div>
-              <h3>2</h3>
-            </div>
-            <div>
-              <h3>3</h3>
-            </div>
-            <div>
-              <h3>4</h3>
-            </div>
-          </Carousel>
+          <div className="carousel-movie">
+            <AliceCarousel>
+                  <div className="item-carousel">
+                    <div className="movie-poster">
+                      <img src="http://oleoespecias.com/images/slider/oleoespecias-slide3.jpg" />
+                    </div>
+                    <div className="movie-details">
+                      <span>/10</span>
+                      <h2>hola</h2>
+                    </div>
+                  </div>
+            </AliceCarousel>
+            <button className="btn-angle btn-angle--left"><Icon type="left" /></button>
+            <button className="btn-angle btn-angle--right"><Icon type="right" /></button>
           </div>
           <div className="cards">
             <Row gutter={16}>
