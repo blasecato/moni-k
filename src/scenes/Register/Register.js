@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/Register.css';
+import '../../Sass/mein.scss';
 import { withRouter } from 'react-router-dom';
 import { Button } from 'antd';
 import { Form, Input, Row, Col, AutoComplete, } from 'antd';

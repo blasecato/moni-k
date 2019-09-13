@@ -92,7 +92,8 @@ $desktop: 1024px;
     }
     
     a:hover{
-    text-decoration: underline overline ;
+    transition: all .3s;
+    text-decoration: underline ;
     color: #ffc002; 
     }    
 }  

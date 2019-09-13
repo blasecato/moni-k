@@ -1,6 +1,6 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import '../../css/Login.css';
+import '../../Sass/mein.scss';
 import { withRouter } from 'react-router-dom';
 import { Button,Form, Input,Row,Col,} from 'antd';
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import '../../../css/LayoutHome.css'
 import logo from '../../../assets/images/cocinera.png';
 import { Menu, Icon } from 'antd';
 import { Link } from "react-scroll";
+import '../../../Sass/mein.scss';
 
 const { SubMenu } = Menu;
 
