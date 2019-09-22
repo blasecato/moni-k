@@ -1,7 +1,13 @@
-@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+@import "src/Sass/variables/_variables.scss";
+
 *{
     box-sizing: border-box; 
 }
+.ant-card-body {
+  padding: 0px; 
+    zoom: 1; 
+}
+  
 .App {
   width: 100%;
   height: 100%;
@@ -11,63 +17,106 @@
         background-image: url("http://oleoespecias.com/images/slider/oleoespecias-slide11.jpg");
         background-attachment: fixed;
         background-position: center;
-        
-        }
-      }
-    
+    }
+}
 
-
-  .cards{
-      padding: 15px;
-      background: white;
-      margin: auto;
+.card-home{
+      height: 60%;
+      background: inherit;
+      display: flex;
       flex-wrap: wrap;
-    .card1{
-        border-radius: 15px ;
-        width: 80% ;
-        height: 40% ;
-        background-color: rgba(255,255,255,.85);
-        text-align: center;
-        display: flex;
-        .title{
-            color: chocolate;
-            font-size: 30px ;
-            font-family: Ralewa;
-        }
-        .tex{
-            font-size: 20px ;
-            font-family: Raleway;
-        }
-        .Button{
-            border-radius: 5px ;
-            height: 80px ;
-            width: 150px ;
-            background-color: #fdcc3a ;
-            color: chocolate ;
-            font-size: 20px ;
-            font-family:Arial, Helvetica, sans-serif;
-        }
-      }
-      .card2{
-        border-radius: 5px;
-        height: 40%;
-        width: 40%;
-        display: block;
-        .shef{
-            display: flex;
-            width: 100%;
-            left: 100%;
+      .card-img{
+          width: 45%; 
+          height: 140px ;
+          margin: 2%;
+          background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://png.pngtree.com/thumb_back/fw800/background/20190220/ourmid/pngtree-food-spicy-and-seductive-lobster-shellfish-chinese-meal-background-image_6705.jpg'); 
+          background-position: center;
+          border-radius: 10px ;
+          background-size: 100%;
+        .card1{
+          border-radius: 10px ;
+          border-color: transparent;
+          width: 100%;  
+          height: 140px ;
+          background-color: rgba(223, 171, 123, 0.1);
+          text-align: center;
+          padding: 0;
+          .title{ 
+              color: #ffe292;
+              font-size: 30px ;
+              font-family: Ralewa;
           }
+          .tex{
+              color: #e2dcc2;
+              font-size: 130% ;
+              font-family: Raleway;
+          }
+          .Button{
+              margin-top: 2px;
+              border-radius: 5px ;
+              height: 50px ;
+              width: 120px ;
+              background-color: #fdcc3a ;
+              color: chocolate ;
+              font-size: 20px ;
+              font-family:Arial, Helvetica, sans-serif;
+          } 
+        }
       }
-  }
+      .card-img:hover{
+        transition: all .3s;
+        background-size: 120%;
+      }
+}
   
-  
-  
-  
-  
-  .footer{
-    background-color: rgba(47,23,15,.9);
-  }
+@media(max-width: $smartphone){
+  .card-home{
+    height: 80%; 
+    display: inherit;
+    width: 200%;
+    .card-img{
+        background-size: 120%;
+        height: 100px ;
+        .card1{
+          height: 100px ;
+          .title{ 
+            font-size: 100% ; 
+        }.tex{
+          font-size: 100% ;
+      }
+          .Button{
+            margin-top: 0px;
+            height: 30px ;
+            font-size: 15px ;
+          } 
+        }
+        
+    }
+    .card-img:hover{
+      transition: all .3s;
+      background-size: 140%;
+    }
+}
+}
+@media(min-width: $smartphone) and (max-width: $tablet){
+  .card-home{
+    .card-img{
+        background-size: 120%;
+    }
+    .card-img:hover{
+      transition: all .3s;
+      background-size: 140%;
+    }
+}
+}
+@media(min-width: $desktop){
+    
+}  
+.alice-carousel__stage-item * {
+  line-height: initial;
+  height: 300px;
+  width: 100%;
+}
   
 .carousel-movie {
   position: relative;

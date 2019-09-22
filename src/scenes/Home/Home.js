@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../../assets/images/cocinera.png';
 import shef from '../../assets/images/shef.jpg';
 import { Icon, Card, Layout, Row, Col, Button, Carousel } from 'antd';
-import LayoutHome from '../layout/LayoutHome/LayoutHome';
+import LayoutHome from '../../components/layout/LayoutHome/LayoutHome';
 import '../../Sass/mein.scss';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
@@ -13,28 +13,38 @@ const { Header, Footer, Sider, Content } = Layout;
 class Home extends React.Component {
   state = {
     collapsed: false,
+    
   }
-
+  items = ["https://s2.best-wallpaper.net/wallpaper/2560x1600/1110/Five-colors-of-seasonings_2560x1600.jpg",
+   "https://s2.best-wallpaper.net/wallpaper/2560x1600/1110/Five-colors-of-seasonings_2560x1600.jpg", 
+   "https://s2.best-wallpaper.net/wallpaper/2560x1600/1110/Five-colors-of-seasonings_2560x1600.jpg",
+    "https://s2.best-wallpaper.net/wallpaper/2560x1600/1110/Five-colors-of-seasonings_2560x1600.jpg",
+     "https://s2.best-wallpaper.net/wallpaper/2560x1600/1110/Five-colors-of-seasonings_2560x1600.jpg"]
+ 
+  state = {
+    galleryItems: this.items.map((i) => (<img className="imagen" src={i} key={i}></img>))
+  }
+ 
+  thumbItem = (item, i) => (
+    <span key={item} onClick={() => this.Carousel.slideTo(i)}></span>
+  )
   render() {
-
     return (
       <div className="App">
         <Content className="content">
           <LayoutHome></LayoutHome>
           <div className="carousel-movie">
-            <AliceCarousel>
-              <div className="item-carousel">
-                <div className="movie-poster">
-                  <img src="http://oleoespecias.com/images/slider/oleoespecias-slide3.jpg" />
-                </div>
-                <div className="movie-details">
-                  <span>/10</span>
-                  <h2>hola</h2>
-                </div>
-              </div>
-            </AliceCarousel>
-            <button className="btn-angle btn-angle--left"><Icon type="left" /></button>
-            <button className="btn-angle btn-angle--right"><Icon type="right" /></button>
+          <AliceCarousel
+          dotsDisabled={true}
+          buttonsDisabled={true}
+          items={this.state.galleryItems}
+          ref={(el) => (this.Carousel = el)}
+        />
+       <nav>{this.items.map(this.thumbItem)}</nav>
+
+        <button onClick={() => this.Carousel.slidePrev()} className="btn-angle btn-angle--left"><Icon type="left" /></button>
+        <button onClick={() => this.Carousel.slideNext()} className="btn-angle btn-angle--right"><Icon type="right" /></button>
+            
           </div>
           <div className="card-home">
             <div className="card-img">

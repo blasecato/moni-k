@@ -4,6 +4,7 @@ import Home from '../src/scenes/Home/Home';
 import Login from '../src/scenes/Login/Login';
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import Register from '../src/scenes/Register/Register';
+import List_usuario from '../src/scenes/list-usuario/List_usuario';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/home/" component={Home} />
         <Route path="/login/" component={Login} />
         <Route path="/register/" component={Register} />
+        <Route path="/usuarios/" component={List_usuario} />
       </Router>
     </div>
   );

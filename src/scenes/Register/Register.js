@@ -4,6 +4,9 @@ import { withRouter } from 'react-router-dom';
 import { Button } from 'antd';
 import { Form, Input, Row, Col, AutoComplete, } from 'antd';
 import * as moment from "moment";
+import { Table, Divider, Tag } from 'antd';
+
+const { Column, ColumnGroup } = Table;
 
 moment.locale("es")
 const ButtonGroup = Button.Group;
@@ -13,35 +16,24 @@ class Register extends React.Component {
         collapsed: false,
         confirmDirty: false,
         autoCompleteResult: [],
-        users: [],
-        id:'',
-        dni:'',
-        nombres: '',
-        apeliidos:'',
-        email:'',
-        contrasenia:'',
-        telefoto:'',
-        direccion:'',
-        nombre_em:'',
-        id_genero:'',
-        id_cargo:'',
+        users: []
 
     }
     //consultar usuario
 
-    changeHandler = (e)=>{
-        this.setState({[e.target.nombres]: e.target.value})
+    changeHandler = (e) => {
+        this.setState({ [e.target.nombres]: e.target.value })
     }
-    submitHandler=e=>{
+    submitHandler = e => {
         e.preventDefault()
         console.log(this.state)
-        .post('url',this.state)
-        .then(response => {
-            console.log(response)
-        })
-        .catch(error => {
-            console.log(error)  
-        })
+            .post('url', this.state)
+            .then(response => {
+                console.log(response)
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
     getUser() {
@@ -54,15 +46,15 @@ class Register extends React.Component {
                 console.log(users);
             })
     }
-    getUsers(){
+    getUsers() {
         fetch('http://localhost:3001/usuario')
-        .then((response)=>response.json())
-        .then(data=>{
-            debugger
-        })
+            .then((response) => response.json())
+            .then(data => {
+                debugger
+            })
     }
-    componentDidMount() {       
-        this.getUsers();
+    componentDidMount() {
+        this.getUser();
     }
 
     handleConfirmBlur = e => {
@@ -86,16 +78,16 @@ class Register extends React.Component {
     };
 
     render() {
+        const { movies } = this.props;
         const { getFieldDecorator } = this.props.form;
-        const {id, dni,nombres, apeliidos,email,contrasenia,telefoto, direccion,nombre_em,id_genero, id_cargo}=this.state;
+        const { id, dni, nombres, apeliidos, email, contrasenia, telefoto, direccion, nombre_em, id_genero, id_cargo } = this.state;
         return (
-            <div className="content">
-                <div className="login-wrap">
-                    <div className="login-html">
-                        <input id="tab-2" type="radio" name="taba" className="sign-up" checked />
-                        <label for="tab-2" class="tab">Registrarse</label>
-                        <div className="login-form">
-                            <div className="sign-up-htm">
+            <div className="conten">
+                <div className="card_reg">
+                    <input id="tab-2" type="radio" name="taba" className="sign-up" checked />
+                    <label for="tab-2" class="tab">Registrarse</label>
+                    <div className="login-form">
+                        <div className="sign-up-htm">
                             <Form onSubmit={this.submitHandler}>
                                 <div class="group">
                                     <Row gutter={8}>
@@ -105,9 +97,9 @@ class Register extends React.Component {
                                                 {getFieldDecorator('dni', {
                                                     rules: [{ type: 'number', },
                                                     { required: true, message: 'Porfavor ingrese su Identificacion!', },],
-                                                })(<Input className="input" value={dni} onChange={this.changeHandler}/>)} 
+                                                })(<Input className="input" value={dni} onChange={this.changeHandler} />)}
                                             </Form.Item>
-                                        </Col>  
+                                        </Col>
                                     </Row>
                                     <Row gutter={8}>
                                         <Col span={12}>
@@ -116,7 +108,7 @@ class Register extends React.Component {
                                                 {getFieldDecorator('textNom', {
                                                     rules: [{ type: 'text', },
                                                     { required: true, message: 'Porfavor ingrese su Nombre!', },],
-                                                })(<Input value={nombres} id="nombre" className="input"  onChange={this.changeHandler} />)}
+                                                })(<Input value={nombres} id="nombre" className="input" onChange={this.changeHandler} />)}
                                             </Form.Item>
                                         </Col>
                                         <Col span={12}>
@@ -126,7 +118,7 @@ class Register extends React.Component {
                                                     rules: [{ type: 'text', },
                                                     { required: true, message: 'Porfavor ingrese su Nombre!', },],
                                                 })
-                                                    (<Input className="input" value={apeliidos}  onChange={this.changeHandler} />)}
+                                                    (<Input className="input" value={apeliidos} onChange={this.changeHandler} />)}
                                             </Form.Item>
                                         </Col>
                                     </Row>
@@ -139,7 +131,7 @@ class Register extends React.Component {
                                                 {getFieldDecorator('tel', {
                                                     rules: [{ type: 'number', },
                                                     { required: true, message: 'Porfavor ingrese su Numero!', },],
-                                                })(<Input className="input" value={telefoto}  onChange={this.changeHandler}/>)}
+                                                })(<Input className="input" value={telefoto} onChange={this.changeHandler} />)}
                                             </Form.Item>
                                         </Col>
                                         <Col span={12}>
@@ -148,7 +140,7 @@ class Register extends React.Component {
                                                 {getFieldDecorator('textDir', {
                                                     rules: [{ type: 'text', },
                                                     { required: true, message: 'Porfavor ingrese su Direccion!', }],
-                                                })(<Input className="input" value={direccion}  onChange={this.changeHandler}/>)}
+                                                })(<Input className="input" value={direccion} onChange={this.changeHandler} />)}
                                             </Form.Item>
                                         </Col>
                                     </Row>
@@ -159,9 +151,9 @@ class Register extends React.Component {
                                             <Form.Item>
                                                 <label for="gen" className="label">Genero</label>
                                                 <ButtonGroup className="radio">
-                                                    <Button value={id_genero}   onChange={this.changeHandler} className="radio">Femenino</Button>
-                                                    <Button value={id_genero}  onChange={this.changeHandler} className="radio">MAsculino</Button>
-                                                    <Button value={id_genero}  onChange={this.changeHandler} className="radio">Otro</Button>
+                                                    <Button value={id_genero} onChange={this.changeHandler} className="radio">Femenino</Button>
+                                                    <Button value={id_genero} onChange={this.changeHandler} className="radio">MAsculino</Button>
+                                                    <Button value={id_genero} onChange={this.changeHandler} className="radio">Otro</Button>
                                                 </ButtonGroup>
                                             </Form.Item>
                                         </Col>
@@ -171,7 +163,7 @@ class Register extends React.Component {
                                                 {getFieldDecorator('email', {
                                                     rules: [{ type: 'email', message: 'El usuario ingresado no es valido!', },
                                                     { required: true, message: 'Porfavor ingrese su usuario!', },],
-                                                })(<Input className="input" value={email}  onChange={this.changeHandler}/>)}
+                                                })(<Input className="input" value={email} onChange={this.changeHandler} />)}
                                             </Form.Item>
                                         </Col>
                                     </Row>
@@ -185,7 +177,7 @@ class Register extends React.Component {
                                                     rules: [
                                                         { required: true, message: 'Por favor inserte su contraseña!', },
                                                         { validator: this.validateToNextPassword, },],
-                                                })(<Input type="password" value={contrasenia}  onChange={this.changeHandler} className="input" />)}
+                                                })(<Input type="password" value={contrasenia} onChange={this.changeHandler} className="input" />)}
                                             </Form.Item>
                                         </Col>
                                         <Col span={12}>
@@ -205,18 +197,18 @@ class Register extends React.Component {
                                 <div className="group">
                                     <button type="submit" className="button">Registrarme</button>
                                 </div>
+                                <hr/>
                                 <div className="foot-lnk">
                                     <a href="../Home">Volver</a>
                                 </div>
                             </Form>
-                            </div>
                         </div>
                     </div>
                 </div>
-                <br />
             </div>
         );
     }
 }
+
 Register = withRouter(Register);
 export default Form.create({ name: 'formRegister' })(Register);

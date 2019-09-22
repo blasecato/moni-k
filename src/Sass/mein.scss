@@ -1,19 +1,21 @@
 @import
 "./base/reset";
 
-@import 
-    "./page/app";
 
 @import 
-    "./layout/Layout";
+    "./variables/variables";
 
-@import 
-    "./Home/Home";
 
-@import 
-    "./login/Login";
 
+@import
+    "./components/users/table",
+    "./components/layout/Layout",
+    "./components/layout/LayoutUser";
+    
 @import 
-    "./Register/Register";
+    "./scenes/Home/Home",
+    "./scenes/login/Login",
+    "./scenes/Register/Register",
+    "./scenes/users/list_users"; 
 
   
