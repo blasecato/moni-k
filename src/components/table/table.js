@@ -39,10 +39,8 @@ class Tableu extends React.Component {
   ];
     return (
       <Table dataSource={data}>
-        <ColumnGroup title="Name">
-          <Column title="First Name" dataIndex="firstName" key="firstName" />
+        <Column title="First Name" dataIndex="firstName" key="firstName" />
           <Column title="Last Name" dataIndex="lastName" key="lastName" />
-        </ColumnGroup>
         <Column title="Age" dataIndex="age" key="age" />
         <Column title="Address" dataIndex="address" key="address" />
         <Column

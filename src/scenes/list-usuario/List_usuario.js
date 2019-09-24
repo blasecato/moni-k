@@ -51,9 +51,12 @@ class List_usuario extends React.Component {
         const { users } = this.props;
         return (
             <div className="users">
-            
-                <LayoutUser>
-                </LayoutUser>
+                <div className="users__layout">
+                    <LayoutUser></LayoutUser>
+                </div>
+                <div className="users__table">
+                    <Tableu></Tableu>
+                </div>
                 
             </div>
         );
