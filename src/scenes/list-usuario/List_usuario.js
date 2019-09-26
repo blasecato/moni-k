@@ -57,7 +57,6 @@ class List_usuario extends React.Component {
                 <div className="users__table">
                     <Tableu></Tableu>
                 </div>
-                
             </div>
         );
     }

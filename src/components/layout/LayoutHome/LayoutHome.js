@@ -24,7 +24,7 @@ class LayoutHome extends React.Component {
         return (
             <div>
                 <div className="layout">
-                    <a className="a" href="">
+                    <a className="a" href="../store/">
                         Tienda
                     </a>
                     <a className="a">

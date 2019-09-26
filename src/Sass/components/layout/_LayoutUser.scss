@@ -20,14 +20,21 @@
     }
     &__prof{
       display: flex;
+      padding: 5px; 
       &__profile{
-        margin: 5px 10px;  
         height: 60px; 
         width: 60px;
         border-radius: 50px;
+        &__btn--img{
+          margin: 0;
+          padding: 0%; 
+        }
       }
     }   
   }
+}
+.ant-popover-inner{
+  background-color:  rgba(105, 87, 81, 0.6);
 }
 .ant-input-search{
  margin: 15px;
