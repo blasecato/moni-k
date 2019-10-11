@@ -7,7 +7,7 @@
   padding: 0px; 
     zoom: 1; 
 }
-  
+
 .App {
   width: 100%;
   height: 100%;
@@ -17,7 +17,59 @@
         background-image: url("http://oleoespecias.com/images/slider/oleoespecias-slide11.jpg");
         background-attachment: fixed;
         background-position: center;
+        .contact{
+          height: 320px;
+          background: inherit;
+          
+          &__cards{
+            padding: 2% 10%;
+            .contact__cards--card{
+              border-top-left-radius: 20px ;
+              .ant-card-head{
+                border-top-left-radius: 20px ;
+                background: #fdcc3a;
+                color: white;
+                
+              }
+            }
+            .contact__cards--img{
+              width: 100%;
+              height: 200px;
+            }
+          }
+        }
+        .contacto{
+            height: 40%;  
+            padding: 10px;
+            
+            background-image: linear-gradient(rgba(112, 55, 22, 0.7), rgba(184, 133, 23, 0.7)), url('http://oleoespecias.com/images/slider/oleoespecias-slide3.jpg');
+          &__title{
+            display: grid;
+            justify-content: center;
+            
+            h1{
+              margin: 15px;  
+              color: #fdcc3a;
+              font-family: cursive;
+              font-size: 30px;
+            }
+            p{
+              font-family: cursive;
+              font-size: 20px;
+              color:white;
+            }
+          }
+          &__img{ 
+            display: flex;
+            justify-content: space-around;
+            .contacto__img--btn{
+              height: 100px;
+              width: 100px;
+            }
+          }
+        }
     }
+    
 }
 
 .card-home{
@@ -228,3 +280,4 @@
     transition: all .3s;
   }
 }
+

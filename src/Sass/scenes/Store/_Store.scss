@@ -1,22 +1,63 @@
 .store{
-    width: 100%;
-    height: 100%;
     background-image: url('https://cdn.pixabay.com/photo/2016/03/25/22/05/mosaic-1279696_960_720.jpg');
     background-attachment: fixed;
     background-position: center;
+    
+    .bton{
+        background:#fdcc3a;
+        color: white;
+        margin: 20px 10px; 
+    }
     &__content{
-        padding: 5%;
+        display: flex;
+        padding: 2% 5%;
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap; 
+        &__a{
+            font-size: 25px;
+        }
+        &__title{
+            display: flex;
+        }
+        &__h1{
+            font-size: 25px;
+        }
         &__card{
-            width: 40% ;
-            &__img{
+            width: 40%;
+            margin: 10px 5%;
+            &__content{
+                display: flex; 
+                height: 200px;
                 width: 100%;
-                height: 100%;
+                &__img{
+                    height: 200px;
+                    width: 40%;
+                    display: flex;
+                    padding:  10px 0;
+                    justify-content: center;
+                    .store__content__card__content__img--img{
+                        width: 90%;
+                    }
+                }
+                &__obj{
+                    height: 200px;
+                    width: 60%;
+                    padding:  20px;
+                    display: grid;
+                    justify-content: center;
+                    .store__content__card__content__obj--valor{
+                        display: flex;
+                        justify-content: space-between; 
+                    }
+                    .btn{
+                        background:#fdcc3a;
+                        color: white;
+                    }
+                }
             }
-            &__desc{
-                margin:  0 100%; 
-            }
+           
         }
     }
 
 }
- 

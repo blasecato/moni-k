@@ -14,8 +14,7 @@ class Login extends React.Component {
         const { getFieldDecorator } = this.props.form;
         return (
             <div className="content">
-
-                <br />
+                <br/>
                 <div className="login-wrap-log">
                     <div className="login-html">
                         <input id="tab-1" type="radio" name="tab" className="sign-in" checked />

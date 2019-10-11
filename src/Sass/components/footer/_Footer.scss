@@ -1,0 +1,36 @@
+
+.footer{
+    width: 100%;
+    height: 160px;
+    background: rgb(20, 14, 5);
+    .footer{
+        height: 40%;  
+        padding: 10px;
+        
+        background-image: linear-gradient(rgba(112, 55, 22, 0.7), rgba(184, 133, 23, 0.7)), url('http://oleoespecias.com/images/slider/oleoespecias-slide3.jpg');
+      &__title{
+        display: grid;
+        justify-content: center;
+        
+        h1{
+          margin: 15px;  
+          color: #fdcc3a;
+          font-family: cursive;
+          font-size: 30px;
+        }
+        p{
+          font-family: cursive;
+          font-size: 20px;
+          color:white;
+        }
+      }
+      &__img{ 
+        display: grid;
+        justify-content: center;
+        .footer__img--btn{
+          height: 100px;
+          width: 100px;
+        }
+      }
+    }
+}

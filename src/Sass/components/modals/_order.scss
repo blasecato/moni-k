@@ -1,0 +1,29 @@
+.order{
+    &__modal{
+        width: 40%;
+        height: 50%;
+        display: block;
+        &__content{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+.ant-modal-header{
+    background: #fdcc3a;
+    
+}
+.ant-modal-body{
+    display: grid;
+}
+ .ant-btn-primary{
+    background: #fdcc3a;
+    border-color: #fdcc3a;
+    color: white;
+}
+.ant-modal-title{
+    color: white;
+}
+.ant-modal-close-x{
+    color: white;
+}
